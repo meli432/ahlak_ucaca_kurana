@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Nasumične poruke</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      text-align: center;
+      max-width: 500px;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    #poruka {
+      font-size: 1.4em;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    button {
+      background: #6C63FF;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #574bff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Poruka dana</h1>
+    <p id="poruka"></p>
+    <button onclick="novaPoruka()">Nova poruka</button>
+  </div>
+
+  <script>
+    const poruke = [
+      "Poruka 1: Budi hrabra!",
+      "Poruka 2: Osmijeh mijenja sve.",
+      "Poruka 3: Danas je tvoj dan.",
+      "Poruka 4: Male stvari čine sreću.",
+      "Poruka 5: Vjeruj u sebe.",
+      "Poruka 6: Svaki početak je težak.",
+      "Poruka 7: Uspjeh traži strpljenje.",
+      "Poruka 8: Ljubaznost je besplatna.",
+      "Poruka 9: Sanjaj veliko.",
+      "Poruka 10: Ne odustaj lako.",
+      // ... dodaj ostale poruke
+    ];
+
+    function novaPoruka() {
+      const randomIndex = Math.floor(Math.random() * poruke.length);
+      document.getElementById("poruka").innerText = poruke[randomIndex];
+    }
+
+    // Prikaži poruku odmah kad se stranica otvori
+    novaPoruka();
+  </script>
+</body>
+</html>
