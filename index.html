@@ -16,54 +16,30 @@
       text-align: center;
     }
 
-    h1 {
-      color: #000; /* crna boja naslova */
-      margin-bottom: 20px;
-      font-size: 2em;
-    }
-
     #poruka {
-      font-size: 2em;   /* veći font za telefone */
-      color: #000;      /* crna boja teksta */
-      line-height: 1.5;
-    }
-
-    /* 📱 Na ekranima manjim od 600px povećaj font još više */
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2.4em;
-      }
-      #poruka {
-        font-size: 2.4em;
-      }
-    }
-
-    /* 📱 Na baš malim ekranima (do 400px) još veći font */
-    @media (max-width: 400px) {
-      #poruka {
-        font-size: 2.8em;
-      }
+      font-size: 10vw;              /* ogromna veličina teksta */
+      color: #000;                  /* crna boja */
+      line-height: 1.2;             /* malo zbijenije linije */
+      background: rgba(255,255,255,0.7); /* svijetla kutija iza teksta */
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 90%;               /* širina teksta ograničena da se prelama */
+      word-wrap: break-word;        /* osigurava da se riječi prelamaju */
     }
   </style>
 </head>
 <body>
-  <div>
-    <h1>Poruka dana</h1>
-    <p id="poruka"></p>
-  </div>
+  <p id="poruka"></p>
 
   <script>
     const poruke = [
-      "Poruka 1: Budi hrabra!",
-      "Poruka 2: Osmijeh mijenja sve.",
-      "Poruka 3: Danas je tvoj dan.",
-      "Poruka 4: Male stvari čine sreću.",
-      "Poruka 5: Vjeruj u sebe.",
-      "Poruka 6: Svaki početak je težak.",
-      "Poruka 7: Uspjeh traži strpljenje.",
-      "Poruka 8: Ljubaznost je besplatna.",
-      "Poruka 9: Sanjaj veliko.",
-      "Poruka 10: Ne odustaj lako."
+      "Budi hrabra!",
+      "Osmijeh mijenja sve.",
+      "Danas je tvoj dan.",
+      "Male stvari čine sreću.",
+      "Vjeruj u sebe.",
+      "Sanjaj veliko.",
+      "Ne odustaj lako."
       // ... dodaj ostale poruke
     ];
 
