@@ -17,14 +17,17 @@
     }
 
     #poruka {
-      font-size: 10vw;              /* ogromna veličina teksta */
-      color: #000;                  /* crna boja */
-      line-height: 1.2;             /* malo zbijenije linije */
-      background: rgba(255,255,255,0.7); /* svijetla kutija iza teksta */
+      font-size: 10vw;                 /* početno jako velik font */
+      color: #000;                     /* crna boja */
+      line-height: 1.2;
+      background: rgba(255,255,255,0.7);
       padding: 20px;
       border-radius: 12px;
-      max-width: 90%;               /* širina teksta ograničena da se prelama */
-      word-wrap: break-word;        /* osigurava da se riječi prelamaju */
+      max-width: 90%;
+      max-height: 80vh;                /* zauzima do 80% visine ekrana */
+      overflow-y: auto;                /* dodaje scroll ako je preduga */
+      white-space: normal;             /* osigurava prelamanje */
+      word-break: break-word;          /* prelama i duge riječi */
     }
   </style>
 </head>
@@ -77,7 +80,19 @@
     ];
 
     const randomIndex = Math.floor(Math.random() * poruke.length);
-    document.getElementById("poruka").innerHTML = poruke[randomIndex];
+    const poruka = poruke[randomIndex];
+
+    const porukaElement = document.getElementById("poruka");
+    porukaElement.innerHTML = poruka;
+
+    // Ako je poruka duža od 200 znakova, smanji font
+    if (poruka.length > 200) {
+      porukaElement.style.fontSize = "5vw";
+    }
+    if (poruka.length > 400) {
+      porukaElement.style.fontSize = "3.5vw";
+    }
+
   </script>
 </body>
 </html>
