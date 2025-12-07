@@ -12,34 +12,25 @@
       align-items: center;
       height: 100vh;
       margin: 0;
-      padding: 20px; /* da ima malo prostora na manjim ekranima */
-    }
-
-    .container {
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      padding: 20px;
       text-align: center;
-      width: 100%;          /* zauzima cijelu širinu */
-      max-width: 500px;     /* ali ne prelazi 500px na većim ekranima */
     }
 
     h1 {
       color: #333;
       margin-bottom: 20px;
-      font-size: 1.6em;
+      font-size: 2em;
     }
 
     #poruka {
-      font-size: 1.2em;
-      color: #555;
-      line-height: 1.4;
+      font-size: 1.6em;
+      color: #222;
+      line-height: 1.5;
     }
   </style>
 </head>
 <body>
-  <div class="container">
+  <div>
     <h1>Poruka dana</h1>
     <p id="poruka"></p>
   </div>
